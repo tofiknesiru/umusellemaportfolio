@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tofik Nesiru | Software Developer & Tech Professional</title>
+    <meta name="description" content="Professional portfolio of Tofik Nesiru (ተውፊቅ ነስሩ), Software Developer at INSA, Tech Entrepreneur, and Educator.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f5ff',
+                            100: '#e0ebff',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            900: '#090d16',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        amharic: ['Nyala', 'Ethi', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white" id="bodyElement">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo / Name -->
+                <a href="#home" class="flex items-center space-x-2">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-lg shadow-md">TN</div>
+                    <div>
+                        <span id="navBrandName" class="font-bold text-lg text-slate-900 block leading-tight">Tofik Nesiru</span>
+                        <span class="text-xs text-blue-600 font-medium">Software Developer</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#home" class="nav-home text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="nav-about text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#education" class="nav-education text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Education</a>
+                    <a href="#experience" class="nav-experience text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Experience</a>
+                    <a href="#skills" class="nav-skills text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Skills</a>
+                    <a href="#projects" class="nav-projects text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#services" class="nav-services text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#certifications" class="nav-certifications text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Certifications</a>
+                    <a href="#contact" class="nav-contact text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+
+                <!-- Controls: Language Switcher & Mobile Toggle -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="toggleLanguage()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg border border-slate-300 bg-slate-50 hover:bg-slate-100 text-slate-700 text-sm font-medium transition-all shadow-sm">
+                        <i data-lucide="globe" class="w-4 h-4 text-blue-600"></i>
+                        <span id="langBtnText">አማርኛ</span>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">
+                        <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2 shadow-lg">
+            <a href="#home" onclick="toggleMobileMenu()" class="nav-home block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="nav-about block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">About</a>
+            <a href="#education" onclick="toggleMobileMenu()" class="nav-education block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">Education</a>
+            <a href="#experience" onclick="toggleMobileMenu()" class="nav-experience block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">Experience</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="nav-skills block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">Skills</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="nav-projects block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">Projects</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="nav-services block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">Services</a>
+            <a href="#certifications" onclick="toggleMobileMenu()" class="nav-certifications block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">Certifications</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="nav-contact block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-blue-50 hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-blue-50/50 via-white to-slate-50 py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-blue-100/80 text-blue-700 px-3.5 py-1.5 rounded-full text-sm font-medium shadow-sm">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        <span id="heroGreeting">Hello, I'm</span>
+                    </div>
+                    <h1 id="heroName" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight">Tofik Nesiru</h1>
+                    <p id="heroTitle" class="text-xl sm:text-2xl font-semibold text-blue-700">Software Developer at INSA & Tech Entrepreneur</p>
+                    <p id="heroSubtitle" class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Building robust software solutions, scalable web applications, and empowering the next generation of tech talent through Yegna Tec Solutions.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#projects" id="btnPortfolio" class="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 transition-all transform hover:-translate-y-0.5">
+                            <span>View My Portfolio</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#contact" id="btnContact" class="inline-flex items-center space-x-2 bg-white hover:bg-slate-50 text-slate-800 font-medium px-6 py-3.5 rounded-xl border border-slate-300 shadow-sm transition-all">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                    <div class="flex items-center justify-center lg:justify-start space-x-4 pt-4 text-slate-500">
+                        <span class="text-sm font-medium text-slate-400">Connect:</span>
+                        <a href="https://linkedin.com" target="_blank" class="p-2 rounded-full bg-slate-100 hover:bg-blue-50 hover:text-blue-600 transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="https://t.me/ibnyusuf21" target="_blank" class="p-2 rounded-full bg-slate-100 hover:bg-blue-50 hover:text-blue-600 transition-colors"><i data-lucide="send" class="w-5 h-5"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="p-2 rounded-full bg-slate-100 hover:bg-blue-50 hover:text-blue-600 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-500 rounded-3xl transform rotate-3 opacity-90 shadow-2xl"></div>
+                        <div class="absolute inset-0 bg-slate-900 rounded-3xl overflow-hidden shadow-xl transform -rotate-2 border-4 border-white flex flex-col items-center justify-center p-6 text-white text-center">
+                            <div class="w-24 h-24 bg-blue-600/35 rounded-full flex items-center justify-center mb-4 border border-blue-400/30">
+                                <i data-lucide="laptop" class="w-12 h-12 text-blue-300"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold tracking-tight">Tofik Nesiru</h3>
+                            <p class="text-blue-300 text-sm mt-1">Software Developer @ INSA</p>
+                            <div class="mt-4 inline-flex items-center space-x-1.5 bg-blue-500/20 border border-blue-400/30 px-3 py-1 rounded-full text-xs text-blue-200">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                                <span>Addis Ababa, Ethiopia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="aboutTitle" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">About Me</h2>
+                <p id="aboutSubtitle" class="text-lg text-slate-600 mt-2">Passionate software engineer, educator, and digital innovator based in Addis Ababa, Ethiopia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-6 space-y-6">
+                    <h3 id="bioHeading" class="text-2xl font-semibold text-slate-900">Professional Biography</h3>
+                    <p id="bioText1" class="text-slate-600 leading-relaxed text-base">
+                        I am Tofik Nesiru (also known as Tewfik or Abusellema), a dedicated Software Developer currently contributing to the Information Network Security Administration (INSA). With a strong foundation in computer science and extensive practical experience across system administration, full-stack engineering, and technical education, I bridge the gap between complex software systems and user-centric digital experiences.
+                    </p>
+                    <p id="bioText2" class="text-slate-600 leading-relaxed text-base">
+                        Previously, I served for one and a half years as a System Administrator at the Addis Ababa Education Bureau and taught at Dilber General Secondary School. As the founder of Yegna Tec Solutions and Tewfik Business Center, I am deeply committed to driving technological advancement and digital skills training across Ethiopia.
+                    </p>
+                    <div class="pt-4">
+                        <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-xl text-sm font-semibold border border-blue-100">
+                            <i data-lucide="building" class="w-4 h-4 text-blue-600"></i>
+                            <span id="founderTag">Founder: Yegna Tec Solutions & Tewfik Business Center</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-8">
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 id="strengthsHeading" class="text-xl font-semibold text-slate-900 mb-4 flex items-center space-x-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600"></i>
+                            <span>Personal Strengths</span>
+                        </h4>
+                        <ul id="strengthsList" class="space-y-3">
+                            <li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>Full-stack software engineering & systems architecture</span></li>
+                            <li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>Technical leadership & instructional training</span></li>
+                            <li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>Problem-solving & analytical thinking</span></li>
+                            <li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>Entrepreneurial drive & project management</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 id="valuesHeading" class="text-xl font-semibold text-slate-900 mb-4 flex items-center space-x-2">
+                            <i data-lucide="sparkles" class="w-5 h-5 text-blue-600"></i>
+                            <span>Professional Values</span>
+                        </h4>
+                        <ul id="valuesList" class="space-y-3">
+                            <li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>Commitment to excellence and code quality</span></li>
+                            <li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>Continuous learning and adaptation</span></li>
+                            <li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>Empowering communities through technology</span></li>
+                            <li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>Integrity and collaborative teamwork</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="eduSectionTitle" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Education & Qualifications</h2>
+                <p id="eduSectionSubtitle" class="text-lg text-slate-600 mt-2">My academic background and formal foundations.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-md relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-blue-600"></div>
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                        <div>
+                            <h3 id="eduDegree" class="text-xl font-bold text-slate-900">BSc in Computer Science</h3>
+                            <p id="eduInst" class="text-blue-600 font-semibold">Debremarkos University</p>
+                        </div>
+                        <span id="eduYear" class="mt-2 sm:mt-0 inline-block bg-blue-50 text-blue-700 font-semibold px-3 py-1 rounded-full text-sm">2023</span>
+                    </div>
+                    <p id="eduDesc" class="text-slate-600 leading-relaxed">
+                        Completed rigorous academic training covering algorithms, data structures, software engineering principles, database management systems, and networking.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="expSectionTitle" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Professional Experience</h2>
+                <p id="expSectionSubtitle" class="text-lg text-slate-600 mt-2">My career journey in software engineering and IT infrastructure.</p>
+            </div>
+
+            <div id="experienceContainer" class="max-w-4xl mx-auto space-y-8">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills and Expertise Section -->
+    <section id="skills" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="skillsSectionTitle" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Skills & Expertise</h2>
+                <p id="skillsSectionSubtitle" class="text-lg text-slate-600 mt-2">A comprehensive overview of my technical and professional capabilities.</p>
+            </div>
+
+            <div id="skillsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects and Achievements Section -->
+    <section id="projects" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="projSectionTitle" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Projects & Achievements</h2>
+                <p id="projSectionSubtitle" class="text-lg text-slate-600 mt-2">Highlighted software engineering projects and community initiatives.</p>
+            </div>
+
+            <div id="projectsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="servSectionTitle" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Professional Services</h2>
+                <p id="servSectionSubtitle" class="text-lg text-slate-600 mt-2">What I can do for clients, organizations, and students.</p>
+            </div>
+
+            <div id="servicesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications and Training Section -->
+    <section id="certifications" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="certSectionTitle" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Certifications & Training</h2>
+                <p id="certSectionSubtitle" class="text-lg text-slate-600 mt-2">Continuous professional development and accredited credentials.</p>
+            </div>
+
+            <div id="certificationsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="contactTitle" class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">Get In Touch</h2>
+                <p id="contactSubtitle" class="text-lg text-slate-600 mt-2">Let's discuss opportunities, projects, or collaborations.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-50 text-blue-600 rounded-xl"><i data-lucide="mail" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 id="emailLabel" class="text-sm font-semibold text-slate-400">Email</h4>
+                                <a href="mailto:tofiknesiru@gmail.com" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">tofiknesiru@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-50 text-blue-600 rounded-xl"><i data-lucide="phone" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 id="phoneLabel" class="text-sm font-semibold text-slate-400">Phone</h4>
+                                <a href="tel:+251923285140" class="text-slate-900 font-medium hover:text-blue-600 transition-colors">+251 92 328 5140</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-50 text-blue-600 rounded-xl"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+                            <div>
+                                <h4 id="locationLabel" class="text-sm font-semibold text-slate-400">Location</h4>
+                                <p class="text-slate-900 font-medium">Addis Ababa, Ethiopia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-around">
+                        <a href="https://linkedin.com" target="_blank" class="flex flex-col items-center space-y-1 text-slate-600 hover:text-blue-600 transition-colors">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                            <span class="text-xs font-medium">LinkedIn</span>
+                        </a>
+                        <a href="https://t.me/ibnyusuf21" target="_blank" class="flex flex-col items-center space-y-1 text-slate-600 hover:text-blue-600 transition-colors">
+                            <i data-lucide="send" class="w-6 h-6"></i>
+                            <span class="text-xs font-medium">Telegram</span>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="flex flex-col items-center space-y-1 text-slate-600 hover:text-blue-600 transition-colors">
+                            <i data-lucide="facebook" class="w-6 h-6"></i>
+                            <span class="text-xs font-medium">Facebook</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                        <div id="formSuccess" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 p-6 rounded-xl text-center space-y-2">
+                            <i data-lucide="check-circle-2" class="w-12 h-12 text-emerald-600 mx-auto"></i>
+                            <h4 class="text-lg font-bold">Success!</h4>
+                            <p id="successMsgText" class="text-sm">Thank you! Your message has been sent successfully.</p>
+                        </div>
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                            <div>
+                                <label id="formNameLabel" class="block text-sm font-medium text-slate-700 mb-2">Your Name</label>
+                                <input type="text" id="fieldName" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all" placeholder="Your full name">
+                            </div>
+                            <div>
+                                <label id="formEmailLabel" class="block text-sm font-medium text-slate-700 mb-2">Your Email</label>
+                                <input type="email" id="fieldEmail" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all" placeholder="your.email@example.com">
+                            </div>
+                            <div>
+                                <label id="formMessageLabel" class="block text-sm font-medium text-slate-700 mb-2">Your Message</label>
+                                <textarea id="fieldMessage" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all" placeholder="Write your message here..."></textarea>
+                            </div>
+                            <button type="submit" id="sendBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3.5 px-6 rounded-xl shadow-lg shadow-blue-600/20 transition-all flex items-center justify-center space-x-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div class="text-center md:text-left">
+                <span id="footerName" class="text-lg font-bold block">Tofik Nesiru (ተውፊቅ ነስሩ)</span>
+                <span id="footerTagline" class="text-sm text-slate-400">Software Developer at INSA & Tech Entrepreneur.</span>
+            </div>
+            <div id="footerRights" class="text-sm text-slate-400 text-center">
+                © 2026 Tofik Nesiru (ተውፊቅ ነስሩ). All rights reserved.
+            </div>
+            <div class="flex items-center space-x-4 text-slate-400">
+                <a href="https://linkedin.com" target="_blank" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="https://t.me/ibnyusuf21" target="_blank" class="hover:text-white transition-colors"><i data-lucide="send" class="w-5 h-5"></i></a>
+                <a href="https://facebook.com" target="_blank" class="hover:text-white transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Bilingual Support and Interactivity -->
+    <script>
+        let currentLang = 'en';
+
+        const dictionary = {
+            en: {
+                nav: { home: "Home", about: "About", education: "Education", experience: "Experience", skills: "Skills", projects: "Projects", services: "Services", certifications: "Certifications", contact: "Contact" },
+                navBrandName: "Tofik Nesiru",
+                langBtnText: "አማርኛ",
+                hero: {
+                    greeting: "Hello, I'm",
+                    name: "Tofik Nesiru",
+                    title: "Software Developer at INSA & Tech Entrepreneur",
+                    subtitle: "Building robust software solutions, scalable web applications, and empowering the next generation of tech talent through Yegna Tec Solutions.",
+                    viewPortfolio: "View My Portfolio",
+                    contactMe: "Contact Me"
+                },
+                about: {
+                    title: "About Me",
+                    subtitle: "Passionate software engineer, educator, and digital innovator based in Addis Ababa, Ethiopia.",
+                    bioTitle: "Professional Biography",
+                    bioText1: "I am Tofik Nesiru (also known as Tewfik or Abusellema), a dedicated Software Developer currently contributing to the Information Network Security Administration (INSA). With a strong foundation in computer science and extensive practical experience across system administration, full-stack engineering, and technical education, I bridge the gap between complex software systems and user-centric digital experiences.",
+                    bioText2: "Previously, I served for one and a half years as a System Administrator at the Addis Ababa Education Bureau and taught at Dilber General Secondary School. As the founder of Yegna Tec Solutions and Tewfik Business Center, I am deeply committed to driving technological advancement and digital skills training across Ethiopia.",
+                    founderTag: "Founder: Yegna Tec Solutions & Tewfik Business Center",
+                    strengthsTitle: "Personal Strengths",
+                    strengths: [
+                        "Full-stack software engineering & systems architecture",
+                        "Technical leadership & instructional training",
+                        "Problem-solving & analytical thinking",
+                        "Entrepreneurial drive & project management"
+                    ],
+                    valuesTitle: "Professional Values",
+                    values: [
+                        "Commitment to excellence and code quality",
+                        "Continuous learning and adaptation",
+                        "Empowering communities through technology",
+                        "Integrity and collaborative teamwork"
+                    ]
+                },
+                education: {
+                    title: "Education & Qualifications",
+                    subtitle: "My academic background and formal foundations.",
+                    degree: "BSc in Computer Science",
+                    institution: "Debremarkos University",
+                    year: "2023",
+                    desc: "Completed rigorous academic training covering algorithms, data structures, software engineering principles, database management systems, and networking."
+                },
+                experience: {
+                    title: "Professional Experience",
+                    subtitle: "My career journey in software engineering and IT infrastructure.",
+                    jobs: [
+                        {
+                            role: "Software Developer",
+                            company: "Information Network Security Administration (INSA)",
+                            period: "Sep 12, 2025 – Present",
+                            responsibilities: [
+                                "Developing and maintaining secure backend systems and enterprise web applications.",
+                                "Collaborating with cross-functional teams to design scalable software architectures.",
+                                "Implementing robust APIs and optimizing database performance."
+                            ],
+                            achievements: "Successfully delivered high-performance software modules for national technical initiatives."
+                        },
+                        {
+                            role: "System Administrator",
+                            company: "Addis Ababa Education Bureau",
+                            period: "1.5 Years",
+                            responsibilities: [
+                                "Managed network infrastructure, servers, and system security protocols.",
+                                "Provided technical support and system maintenance across educational departments.",
+                                "Ensured high availability of digital learning management resources."
+                            ],
+                            achievements: "Streamlined IT operations and reduced system downtime significantly across regional bureaus."
+                        },
+                        {
+                            role: "Teacher & Educator",
+                            company: "Dilber General Secondary School",
+                            period: "Teaching & Mentorship",
+                            responsibilities: [
+                                "Taught foundational computer science and mathematics under the name Tofik Nesiru Yesuf.",
+                                "Mentored students in digital literacy and analytical problem-solving."
+                            ],
+                            achievements: "Inspired numerous students to pursue STEM careers and higher technical education."
+                        }
+                    ]
+                },
+                skills: {
+                    title: "Skills & Expertise",
+                    subtitle: "A comprehensive overview of my technical and professional capabilities.",
+                    categories: [
+                        { name: "Technical & Development", skills: ["C# & .NET", "PHP & Backend", "Python", "HTML5 / CSS3 / JavaScript", "React & TypeScript", "MySQL & Databases", "Visual Studio & VS Code"] },
+                        { name: "Systems & Infrastructure", skills: ["System Administration", "Network Subnetting", "Server Management", "Linux & Windows Server", "IT Security Protocols"] },
+                        { name: "Teaching & Leadership", skills: ["Curriculum Development", "Technical Training & Lecturing", "Public Speaking", "Team Coordination", "Project Management"] },
+                        { name: "Business & Digital Services", skills: ["Website Development", "Business Plan Preparation", "Document Formatting", "Startup Operations (Yegna Tec Solutions)"] }
+                    ]
+                },
+                projects: {
+                    title: "Projects & Achievements",
+                    subtitle: "Highlighted software engineering projects and community initiatives.",
+                    list: [
+                        { title: "University Class Scheduling Application", desc: "An end-to-end desktop and backend system designed to automate academic timetable generation and resource allocation for universities.", role: "Lead Developer", tech: "C# / .NET, Visual Studio, SQL Server", outcome: "Eliminated scheduling conflicts and reduced manual administrative workload by 80%." },
+                        { title: "Web-Based Hospital Management System", desc: "A comprehensive digital platform for managing patient records, appointment scheduling, pharmacy inventory, and doctor consultations.", role: "Full-Stack Engineer", tech: "PHP, MySQL, HTML/CSS, JavaScript", outcome: "Streamlined hospital operations and improved patient data retrieval efficiency." },
+                        { title: "Yegna Tec Solutions Training Platform", desc: "A multi-module digital skills training initiative streaming interactive programming and tech lectures across Telegram, TikTok, and YouTube.", role: "Founder & Lead Instructor", tech: "Python, Web Technologies, Social Media Streaming", outcome: "Trained and mentored aspiring developers across Ethiopia." },
+                        { title: "AllTechUp.com (AI & Tech Society)", desc: "A digital technology community platform sharing cutting-edge AI insights, tutorials, and tech trends.", role: "Founder & Content Director", tech: "Digital Media & Web Community Building", outcome: "Grew community reach to a milestone of 50,000+ followers on Facebook." }
+                    ]
+                },
+                services: {
+                    title: "Professional Services",
+                    subtitle: "What I can do for clients, organizations, and students.",
+                    list: [
+                        { title: "Software & Web Development", desc: "Custom web application development, backend engineering in PHP and C#, and responsive frontend design tailored to your business needs." },
+                        { title: "IT & System Administration", desc: "Network infrastructure setup, system security hardening, server management, and technical troubleshooting." },
+                        { title: "Technical Training & Mentorship", desc: "Comprehensive programming lessons, software engineering mentorship, and digital skills workshops through Yegna Tec Solutions." },
+                        { title: "Business & Digital Solutions", desc: "Professional website creation, business plan preparation, and technical documentation services via Tewfik Business Center." }
+                    ]
+                },
+                certifications: {
+                    title: "Certifications & Training",
+                    subtitle: "Continuous professional development and accredited credentials.",
+                    list: [
+                        { name: "5 Million Ethiopian Coders Program - Nanodegree", issuer: "Udacity", date: "2025", desc: "Successfully completed the rigorous Udacity Nanodegree program under the national 5 Million Ethiopian Coders initiative, building advanced portfolio projects." },
+                        { name: "System Administration & IT Operations", issuer: "Addis Ababa Education Bureau", date: "Professional Tenure", desc: "Certified practical expertise in managing large-scale educational IT infrastructure and system security." },
+                        { name: "Full-Stack Software Engineering", issuer: "INSA & Independent Practice", date: "Ongoing", desc: "Advanced training and hands-on professional deployment in secure software development and enterprise systems." }
+                    ]
+                },
+                contact: {
+                    title: "Get In Touch",
+                    subtitle: "Let's discuss opportunities, projects, or collaborations.",
+                    emailLabel: "Email",
+                    phoneLabel: "Phone",
+                    locationLabel: "Location",
+                    formName: "Your Name",
+                    formEmail: "Your Email",
+                    formMessage: "Your Message",
+                    sendBtn: "Send Message",
+                    successMsg: "Thank you! Your message has been sent successfully."
+                },
+                footer: {
+                    rights: "© 2026 Tofik Nesiru (ተውፊቅ ነስሩ). All rights reserved.",
+                    tagline: "Software Developer at INSA & Tech Entrepreneur."
+                }
+            },
+            am: {
+                nav: { home: "መነሻ", about: "ስለ እኔ", education: "ትምህርት", experience: "የሥራ ልምድ", skills: "ክህሎቶች", projects: "ፕሮጀክቶች", services: "አገልግሎቶች", certifications: "ሰርቲፊኬቶች", contact: "አግኙኝ" },
+                navBrandName: "ተውፊቅ ነስሩ",
+                langBtnText: "English",
+                hero: {
+                    greeting: "ሰላም፣ እኔ",
+                    name: "ተውፊቅ ነስሩ",
+                    title: "በኢንሳ የሶፍትዌር ገንቢ እና የቴክኖሎጂ ሥራ ፈጣሪ",
+                    subtitle: "ጠንካራ የሶፍትዌር መፍትሄዎችን፣ የዌብ አፕሊኬሽኖችን በመገንባት እና በ'የኛ ቴክ ሶሉሽንስ' ቀጣዩን የቴክኖሎጂ ባለሙያ ትውልድ በማፍራት ላይ እንገኛለን።",
+                    viewPortfolio: "ፖርትፎሊዮውን ይመልከቱ",
+                    contactMe: "ያግኙኝ"
+                },
+                about: {
+                    title: "ስለ እኔ",
+                    subtitle: "አዲስ አበባ፣ ኢትዮጵያ ውስጥ የሚገኝ የሶፍትዌር መሐንዲስ፣ አስተማሪ እና ዲጂታል ፈጣሪ።",
+                    bioTitle: "የሕይወት ታሪክ",
+                    bioText1: "እኔ ተውፊቅ ነስሩ (ተውፊቅ ወይም አቡሰለማ በመባልም የምታወቁኝ) አሁን ላይ በინፎርሜሽን አርክቴክቸር እና ኔትወርክ ሴኪዩሪቲ አስተዳደር (INSA) ውስጥ እንደ ሶፍትዌር ገንቢ እያገለገልኩ ያለሁ ባለሙያ ነኝ። በኮምፒውተር ሳይንስ ጠንካራ መሠረት እና በሲስተም አስተዳደር፣ በ full-stack ምህንድስና እና በቴክኒክ ትምህርት ሰፊ ልምድ አለኝ።",
+                    bioText2: "ከዚህ ቀደም ለአንድ ዓመት ከግማሽ በአዲስ አበባ ትምህርት ቢሮ የሲስተም አስተዳዳሪ በመሆን ሰርቻለሁ፤ እንዲሁም በድልበር አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት አስተምሬአለሁ። የ'የኛ ቴክ ሶሉሽንስ' እና የ'ተውፊቅ ቢዝነስ ሴንተር' መስራች እንደመሆኔ መጠን በኢትዮጵያ ውስጥ የቴክኖሎጂ እድገትን እና የዲጂታል ክህሎት ስልጠናዎችን ለማስፋፋት ቆርጬ ተነስቻለሁ።",
+                    founderTag: "መስራች: የኛ ቴክ ሶሉሽንስ እና ተውፊቅ ቢዝነስ ሴንተር",
+                    strengthsTitle: "የግል ጥንካሬዎች",
+                    strengths: [
+                        "የሶፍትዌር ምህንድስና እና ሲስተም አርክቴክቸር",
+                        "የቴክኒክ መሪነት እና የማስተማር ክህሎት",
+                        "ችግር ፈቺ አስተሳሰብ እና ትንተና",
+                        "የሥራ ፈጠራ ፍላጎት እና የፕሮጀክት አስተዳደር"
+                    ],
+                    valuesTitle: "ሙያዊ እሴቶች",
+                    values: [
+                        "ለጥራት እና ለብቃት መሰጠት",
+                        "ቀጣይነት ያለው სწራፍ እና መላመድ",
+                        "ህብረተሰቡን በቴክኖሎጂ ማብቃት",
+                        "ታማኝነት እና የቡድን ሥራ"
+                    ]
+                },
+                education: {
+                    title: "የትምህርት ዝግጅት",
+                    subtitle: "የአካዳሚክ ማዕረጎቼ እና መሠረቶቼ።",
+                    degree: "በኮምፒዩተር ሳይንስ የባችለር ዲግሪ (BSc)",
+                    institution: "ደብረ ማርቆስ ዩኒቨርሲቲ",
+                    year: "2023",
+                    desc: "አልጎሪዝም፣ ዳታ ስትራክቸር፣ የሶፍትዌር ምህንድስና መርሆዎች፣ የዳታቤዝ አስተዳደር እና የኔትወርክ ትምህርቶችን አጠናቅቄአለሁ።"
+                },
+                experience: {
+                    title: "የሥራ ልምድ",
+                    subtitle: "በሶፍትዌር ምህንድስና እና በ IT መሠረተ ልማት የጉዞ ጉዞዬ።",
+                    jobs: [
+                        {
+                            role: "ሶፍትዌር ገንቢ (Software Developer)",
+                            company: "የመረጃ መረብ ደህንነት አስተዳደር (INSA)",
+                            period: "መስከረም 03, 2018 ዓ.ም (Sep 12, 2025) – እስከአሁን",
+                            responsibilities: [
+                                "ደህንነታቸው የተጠበቁ የባክኤንድ ሲስተሞችን እና የድር አፕሊኬሽኖችን ማልማትና መጠበቅ።",
+                                "ሊሰፉ የሚችሉ (scalable) የሶፍትዌር አርክቴክቸሮችን ለመንደፍ ከቡድን አባላት ጋር መስራት።",
+                                "ጠንካራ APIዎችን መተግበር እና የዳታቤዝ አፈጻጸምን ማሻሻል።"
+                            ],
+                            achievements: "ለሀገራዊ ቴክኒካዊ ተነሳሽነቶች ከፍተኛ አፈጻጸም ያላቸውን የሶፍትዌር ሞጁሎችን በအောင်မြင်ነት አቅርብቻለሁ።"
+                        },
+                        {
+                            role: "የሲስተም አስተዳዳሪ (System Administrator)",
+                            company: "አዲስ አበባ ትምህርት ቢሮ",
+                            period: "1.5 ዓመታት",
+                            responsibilities: [
+                                "የኔትወርክ መሠረተ ልማት፣ ሰርቨሮች እና የሲስተም ሴኪዩሪቲ ፕሮቶኮሎችን ማስተዳደር።",
+                                "በሁሉም የትምህርት ክፍሎች ውስጥ የቴክኒክ ድጋፍ እና የሲስተም ጥገና መስጠት።",
+                                "የዲጂታል ትምህርት መብቶች ሁልጊዜም ዝግጁ መሆናቸውን ማረጋገጥ።"
+                            ],
+                            achievements: "በክልል ቢሮዎች ውስጥ የ IT ሥራዎችን በማቀላጠፍ የስራ መቋረጥን በከፍተኛ ሁኔታ ቀንሻለሁ።"
+                        },
+                        {
+                            role: "መምህር",
+                            company: "ድልበር አጠቃላይ ሁለተኛ ደረጃ ትምህርት ቤት",
+                            period: "ማስተማር እና መምከር",
+                            responsibilities: [
+                                "በተውፊቅ ነስሩ ዩሱፍ ስም መሰረታዊ የኮምፒዩተር ሳይንስ እና የሂሳብ ትምህርቶችን አስተምሬአለሁ።",
+                                "ተማሪዎች በዲጂታል ንባብ እና በችግር ፈቺ አስተሳሰብ እንዲበቁ መክሬአለሁ።"
+                            ],
+                            achievements: "ብዙ ተማሪዎች የ STEM የትምህርት መስኮችን እና ከፍተኛ የቴክኒክ ትምህርት እንዲከብቱ አነሳስቻለሁ።"
+                        }
+                    ]
+                },
+                skills: {
+                    title: "ክህሎቶች እና ዕውቀት",
+                    subtitle: "የቴክኒክ እና ሙያዊ አቅሞቼ አጠቃላይ ዳሰሳ።",
+                    categories: [
+                        { name: "ቴክኒክ እና ዴቨሎፕመንት", skills: ["C# & .NET", "PHP & Backend", "Python", "HTML5 / CSS3 / JavaScript", "React & TypeScript", "MySQL & Databases", "Visual Studio & VS Code"] },
+                        { name: "ሲስተም እና መሠረተ ልማት", skills: ["ሲስተም አስተዳደር", "ኔትወርክ ሰብኔቲንግ", "ሰርቨር ማኔጅመንት", "Linux & Windows Server", "የ IT ሴኪዩሪቲ ፕሮቶኮሎች"] },
+                        { name: "ማስተማር እና መሪነት", skills: ["የሥርዓተ ትምህርት ዝግጅት", "ቴክኒካዊ ስልጠና እና ትምህርት", "የህዝብ ንግግር", "የቡድን ቅንጅት", "የፕሮጀክት አስተዳደር"] },
+                        { name: "ንግድ እና ዲጂታል አገልግሎቶች", skills: ["የድረ-ገጽ ልማት (Website Dev)", "የቢዝነስ ፕላን ዝግጅት", "የሰነድ አቀማመጥ (Formatting)", "የስታርት አፕ ሥራዎች (የኛ ቴክ)"] }
+                    ]
+                },
+                projects: {
+                    title: "ፕሮጀክቶች እና ስኬቶች",
+                    subtitle: "ጠቃሚ የሶፍትዌር ምህንድስና ፕሮጀክቶች እና የማህበረሰብ ተነሳሽነቶች።",
+                    list: [
+                        { title: "የዩኒቨርሲቲ የክፍል መደብ ማስተካከያ አፕሊኬሽን", desc: "ለዩኒቨርሲቲዎች የአካዳሚክ የጊዜ ሰሌዳ ማመንጨት እና የሀብት ድልድል በራስ-ሰር እንዲሰራ የተነደፈ ዴስክቶፕ እና ባክኤንድ ሲስተም።", role: "ዋና ገንቢ (Lead Developer)", tech: "C# / .NET, Visual Studio, SQL Server", outcome: "የጊዜ ሰሌዳ ግጭቶችን በማስወገድ በእጅ የሚሰራውን የአስተዳደር ሥራ በ 80% ቀንሷል።" },
+                        { title: "የድር ሆስፒታል አስተዳደር ሲስተም", desc: "የታካሚ መዛግብትን፣ የቀጠሮ መርሃ ግብሮችን፣ የፋርማሲ ክምችት እና የሐኪም ምክክሮችን ለማስተዳደር የተዘጋጀ አጠቃላይ ዲጂታል መድረክ።", role: "Full-Stack Engineer", tech: "PHP, MySQL, HTML/CSS, JavaScript", outcome: "የሆስፒታል ስራዎችን አቀላጥፎ የታካሚ መረጃዎችን የማግኘት ፍጥነትን አሻሽሏል።" },
+                        { title: "የኛ ቴክ ሶሉሽንስ የስልጠና መድረክ", desc: "በቴሌግራም፣ ቲክቶክ እና ዩቲዩብ ላይ ინტერአክቲቭ የፕሮግራሚንግ እና የቴክኖሎጂ ትምህርቶችን የሚሰጥ ባለብዙ ሞጁል ዲጂታል ክህሎት ስልጠና።", role: "መስራች እና ዋና አስተማሪ", tech: "Python, Web Technologies, Social Media Streaming", outcome: "በኢትዮጵያ ውስጥ በርካታ ጀማሪ ገንቢዎችን አሰልጥኗል መክሯል።" },
+                        { title: "AllTechUp.com (የኤአይ እና ቴክ ማህበረሰብ)", desc: "የቅርብ ጊዜ የ AI ግንዛቤዎችን፣ ትምህርቶችን እና የቴክኖሎጂ አዝማሚያዎችን የሚያጋራ የዲጂታል ቴክኖሎጂ ማህበረሰብ መድረክ።", role: "መስራች እና የይዘት ዳይሬክተር", tech: "Digital Media & Web Community Building", outcome: "በፌስቡክ ላይ የማህበረሰቡን ተደራሽነት ከ 50,000+ ተከታዮች በላይ አድርሷል።" }
+                    ]
+                },
+                services: {
+                    title: "የሙያ አገልግሎቶች",
+                    subtitle: "ለደንበኞች፣ ለድርጅቶች እና ለተማሪዎች የማቅረባቸው አገልግሎቶች።",
+                    list: [
+                        { title: "ሶፍትዌር እና ዌብ ዴቨሎፕመንት", desc: "ብጁ የድር አፕሊኬሽን ልማት፣ በ PHP እና C# የባክኤንድ ምህንድስና፣ እና ለንግድዎ የሚስማማ ሪስፖንሲቭ ንድፍ።" },
+                        { title: "የ IT እና ሲስተም አስተዳደር", desc: "የኔትወርክ መሠረተ ልማት ማዋቀር፣ የሲስተም ሴኪዩሪቲ ማጠናከር፣ የሰርቨር አስተዳደር እና ቴክኒካዊ ድጋፍ።" },
+                        { title: "ቴክኒካዊ ስልጠና እና መምህርነት", desc: "በ'የኛ ቴክ ሶሉሽንስ' አማካኝነት አጠቃላይ የፕሮግራሚንግ ትምህርቶች፣ የሶፍትዌር ምህንድስና ምክክር እና የዲጂታል ክህሎት አውደ ጥናቶች።" },
+                        { title: "የቢዝነስ እና ዲጂታል መፍትሄዎች", desc: "በተውፊቅ ቢዝነስ ሴንተር በኩል ሙያዊ የድረ-ገጽ ኑሮ፣ የቢዝነስ ፕላን ዝግጅት እና የሰነድ ዝግጅት አገልግሎቶች።" }
+                    ]
+                },
+                certifications: {
+                    title: "ሰርቲፊኬቶች እና ስልጠናዎች",
+                    subtitle: "ቀጣይነት ያለው ሙያዊ እድገት እና እውቅና ማረጋገጫዎች።",
+                    list: [
+                        { name: "5 Million Ethiopian Coders Program - Nanodegree", issuer: "Udacity", date: "2025", desc: "በብሔራዊ 5 ሚሊዮን ኢትዮጵያውያን ኮደሮች ዘመቻ ስር የ Udacity ናኖዲግሪ ፕሮግራምን በအောင်ነት አጠናቅቄ የፖርትፎሊዮ ፕሮጀክቶችን ሰርቻለሁ።" },
+                        { name: "ሲስተም አስተዳደር እና IT ስራዎች", issuer: "አዲስ አበባ ትምህርት ቢሮ", date: "የሥራ ቆይታ", desc: "ትልቅ የትምህርት ቤት የ IT መሠረተ ልማት እና የሲስተም ደህንነትን በማስተዳደር ረገድ የተረጋገጠ ተግባራዊ ልምድ።" },
+                        { name: "Full-Stack Software Engineering", issuer: "INSA እና የግል ልምምድ", date: "ቀጣይነት ያለው", desc: "ደህንነቱ የተጠበቀ የሶፍትዌር ልማት እና የድርጅት ሲስተሞች ላይ የላቀ ስልጠና እና ተግባራዊ ስራ።" }
+                    ]
+                },
+                contact: {
+                    title: "ያግኙኝ",
+                    subtitle: "ስለ ስራ እድሎች፣ ፕሮጀክቶች ወይም የትብብር ስራዎች እንወያይ።",
+                    emailLabel: "ኢሜይል",
+                    phoneLabel: "ስልክ ቁጥር",
+                    locationLabel: "አድራሻ",
+                    formName: "ስምዎ",
+                    formEmail: "ኢሜይልዎ",
+                    formMessage: "መልእክትዎ",
+                    sendBtn: "መልእክት ላክ",
+                    successMsg: "እናመሰግናለን! መልእክትዎ በተሳካ ሁኔታ ተልኳል።"
+                },
+                footer: {
+                    rights: "© 2026 ተውፊቅ ነስሩ (Tofik Nesiru). መብቱ በህግ የተጠበቀ ነው።",
+                    tagline: "በኢንሳ የሶፍትዌር ገንቢ እና የቴክኖሎጂ ሥራ ፈጣሪ።"
+                }
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'am' : 'en';
+            const body = document.getElementById('bodyElement');
+            if (currentLang === 'am') {
+                body.classList.remove('font-sans');
+                body.classList.add('font-amharic');
+            } else {
+                body.classList.remove('font-amharic');
+                body.classList.add('font-sans');
+            }
+            renderContent();
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function renderContent() {
+            const t = dictionary[currentLang];
+
+            // Nav
+            document.getElementById('navBrandName').innerText = t.navBrandName;
+            document.getElementById('langBtnText').innerText = t.langBtnText;
+            document.querySelectorAll('.nav-home').forEach(el => el.innerText = t.nav.home);
+            document.querySelectorAll('.nav-about').forEach(el => el.innerText = t.nav.about);
+            document.querySelectorAll('.nav-education').forEach(el => el.innerText = t.nav.education);
+            document.querySelectorAll('.nav-experience').forEach(el => el.innerText = t.nav.experience);
+            document.querySelectorAll('.nav-skills').forEach(el => el.innerText = t.nav.skills);
+            document.querySelectorAll('.nav-projects').forEach(el => el.innerText = t.nav.projects);
+            document.querySelectorAll('.nav-services').forEach(el => el.innerText = t.nav.services);
+            document.querySelectorAll('.nav-certifications').forEach(el => el.innerText = t.nav.certifications);
+            document.querySelectorAll('.nav-contact').forEach(el => el.innerText = t.nav.contact);
+
+            // Hero
+            document.getElementById('heroGreeting').innerText = t.hero.greeting;
+            document.getElementById('heroName').innerText = t.hero.name;
+            document.getElementById('heroTitle').innerText = t.hero.title;
+            document.getElementById('heroSubtitle').innerText = t.hero.subtitle;
+            document.querySelector('#btnPortfolio span').innerText = t.hero.viewPortfolio;
+            document.querySelector('#btnContact span').innerText = t.hero.contactMe;
+
+            // About
+            document.getElementById('aboutTitle').innerText = t.about.title;
+            document.getElementById('aboutSubtitle').innerText = t.about.subtitle;
+            document.getElementById('bioHeading').innerText = t.about.bioTitle;
+            document.getElementById('bioText1').innerText = t.about.bioText1;
+            document.getElementById('bioText2').innerText = t.about.bioText2;
+            document.getElementById('founderTag').innerText = t.about.founderTag;
+            document.getElementById('strengthsHeading').innerHTML = `<i data-lucide="check-circle-2" class="w-5 h-5 text-blue-600"></i><span>${t.about.strengthsTitle}</span>`;
+            
+            const strengthsList = document.getElementById('strengthsList');
+            strengthsList.innerHTML = t.about.strengths.map(s => `<li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>${s}</span></li>`).join('');
+
+            document.getElementById('valuesHeading').innerHTML = `<i data-lucide="sparkles" class="w-5 h-5 text-blue-600"></i><span>${t.about.valuesTitle}</span>`;
+            const valuesList = document.getElementById('valuesList');
+            valuesList.innerHTML = t.about.values.map(v => `<li class="flex items-start space-x-3 text-slate-700"><i data-lucide="chevron-right" class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"></i><span>${v}</span></li>`).join('');
+
+            // Education
+            document.getElementById('eduSectionTitle').innerText = t.education.title;
+            document.getElementById('eduSectionSubtitle').innerText = t.education.subtitle;
+            document.getElementById('eduDegree').innerText = t.education.degree;
+            document.getElementById('eduInst').innerText = t.education.institution;
+            document.getElementById('eduYear').innerText = t.education.year;
+            document.getElementById('eduDesc').innerText = t.education.desc;
+
+            // Experience
+            document.getElementById('expSectionTitle').innerText = t.experience.title;
+            document.getElementById('expSectionSubtitle').innerText = t.experience.subtitle;
+            const expContainer = document.getElementById('experienceContainer');
+            expContainer.innerHTML = t.experience.jobs.map(job => `
+                <div class="bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm transition-all hover:shadow-md">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">${job.role}</h3>
+                            <p class="text-blue-600 font-medium">${job.company}</p>
+                        </div>
+                        <span class="mt-2 sm:mt-0 inline-block bg-slate-200 text-slate-700 font-medium px-3 py-1 rounded-full text-xs">${job.period}</span>
+                    </div>
+                    <div class="space-y-2 mb-4">
+                        <h4 class="text-sm font-semibold text-slate-700 uppercase tracking-wider">${currentLang === 'am' ? 'ኃላፊነቶች:' : 'Responsibilities:'}</h4>
+                        <ul class="space-y-1.5">
+                            ${job.responsibilities.map(r => `<li class="flex items-start space-x-2 text-slate-600 text-sm"><i data-lucide="chevron-right" class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5"></i><span>${r}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                    <div class="bg-blue-50/60 p-3 rounded-lg border border-blue-100 text-sm text-blue-900">
+                        <span class="font-semibold">${currentLang === 'am' ? 'ዋና ስኬት: ' : 'Key Achievement: '}</span>${job.achievements}
+                    </div>
+                </div>
+            `).join('');
+
+            // Skills
+            document.getElementById('skillsSectionTitle').innerText = t.skills.title;
+            document.getElementById('skillsSectionSubtitle').innerText = t.skills.subtitle;
+            const skillsContainer = document.getElementById('skillsContainer');
+            skillsContainer.innerHTML = t.skills.categories.map(cat => `
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="p-3 bg-blue-50 rounded-xl"><i data-lucide="code-2" class="w-6 h-6 text-blue-600"></i></div>
+                            <h3 class="text-xl font-bold text-slate-900">${cat.name}</h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            ${cat.skills.map(s => `<span class="bg-slate-100 text-slate-800 px-3.5 py-1.5 rounded-lg text-sm font-medium border border-slate-200">${s}</span>`).join('')}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Projects
+            document.getElementById('projSectionTitle').innerText = t.projects.title;
+            document.getElementById('projSectionSubtitle').innerText = t.projects.subtitle;
+            const projectsContainer = document.getElementById('projectsContainer');
+            projectsContainer.innerHTML = t.projects.list.map(proj => `
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="p-2 bg-blue-100 text-blue-700 rounded-lg"><i data-lucide="folder-git-2" class="w-6 h-6"></i></div>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-blue-50 text-blue-700 rounded-full border border-blue-200">${proj.role}</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">${proj.title}</h3>
+                        <p class="text-slate-600 text-sm mb-4 leading-relaxed">${proj.desc}</p>
+                        <div class="mb-4">
+                            <span class="text-xs font-semibold text-slate-500 block mb-1">${currentLang === 'am' ? 'ቴክኖሎጂዎች እና ዘዴዎች:' : 'Technologies & Methods:'}</span>
+                            <span class="text-xs bg-white border border-slate-200 text-slate-700 px-2.5 py-1 rounded-md inline-block font-medium">${proj.tech}</span>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-3 rounded-lg text-xs text-emerald-900 mt-4">
+                        <span class="font-semibold">${currentLang === 'am' ? 'ውጤት: ' : 'Outcome: '}</span>${proj.outcome}
+                    </div>
+                </div>
+            `).join('');
+
+            // Services
+            document.getElementById('servSectionTitle').innerText = t.services.title;
+            document.getElementById('servSectionSubtitle').innerText = t.services.subtitle;
+            const servicesContainer = document.getElementById('servicesContainer');
+            servicesContainer.innerHTML = t.services.list.map(serv => `
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4"><i data-lucide="cpu" class="w-6 h-6"></i></div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">${serv.title}</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">${serv.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            // Certifications
+            document.getElementById('certSectionTitle').innerText = t.certifications.title;
+            document.getElementById('certSectionSubtitle').innerText = t.certifications.subtitle;
+            const certificationsContainer = document.getElementById('certificationsContainer');
+            certificationsContainer.innerHTML = t.certifications.list.map(cert => `
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-2 text-blue-600 mb-3">
+                            <i data-lucide="award" class="w-6 h-6"></i>
+                            <span class="text-xs font-semibold px-2.5 py-0.5 bg-blue-100 rounded-full">${cert.issuer}</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">${cert.name}</h3>
+                        <span class="text-xs text-slate-400 block mb-3 font-medium">${cert.date}</span>
+                        <p class="text-slate-600 text-sm leading-relaxed">${cert.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            // Contact
+            document.getElementById('contactTitle').innerText = t.contact.title;
+            document.getElementById('contactSubtitle').innerText = t.contact.subtitle;
+            document.getElementById('emailLabel').innerText = t.contact.emailLabel;
+            document.getElementById('phoneLabel').innerText = t.contact.phoneLabel;
+            document.getElementById('locationLabel').innerText = t.contact.locationLabel;
+            document.getElementById('formNameLabel').innerText = t.contact.formName;
+            document.getElementById('formEmailLabel').innerText = t.contact.formEmail;
+            document.getElementById('formMessageLabel').innerText = t.contact.formMessage;
+            document.querySelector('#sendBtn span').innerText = t.contact.sendBtn;
+            document.getElementById('successMsgText').innerText = t.contact.successMsg;
+
+            // Footer
+            document.getElementById('footerName').innerText = currentLang === 'am' ? 'ተውፊቅ ነስሩ (Tofik Nesiru)' : 'Tofik Nesiru (ተውፊቅ ነስሩ)';
+            document.getElementById('footerTagline').innerText = t.footer.tagline;
+            document.getElementById('footerRights').innerText = t.footer.rights;
+
+            // Re-initialize Lucide icons
+            lucide.createIcons();
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('fieldName').value;
+            const email = document.getElementById('fieldEmail').value;
+            const message = document.getElementById('fieldMessage').value;
+
+            if (name && email && message) {
+                document.getElementById('contactForm').classList.add('hidden');
+                document.getElementById('formSuccess').classList.remove('hidden');
+                setTimeout(() => {
+                    document.getElementById('contactForm').reset();
+                    document.getElementById('contactForm').classList.remove('hidden');
+                    document.getElementById('formSuccess').classList.add('hidden');
+                }, 5000);
+            }
+        }
+
+        // Initial render & icon load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderContent();
+        });
+    </script>
+</body>
+</html>
